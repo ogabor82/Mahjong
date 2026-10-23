@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mahjong</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Mahjong</h1>
+    <div class="stats">
+      <span title="Eltelt idő">⏱ <b id="time">0:00</b></span>
+      <span title="Hátralévő kövek">🀄 <b id="left">144</b></span>
+      <span title="Lehetséges párok">🔗 <b id="moves">0</b></span>
+    </div>
+    <nav class="actions">
+      <button id="btn-hint" title="Tipp (H)">💡 Tipp</button>
+      <button id="btn-undo" title="Visszavonás (U)">↶ Vissza</button>
+      <button id="btn-shuffle" title="Keverés (S)">🔀 Keverés</button>
+      <button id="btn-new" class="primary" title="Új játék (N)">✦ Új játék</button>
+    </nav>
+  </header>
+
+  <main id="stage">
+    <div id="board"></div>
+  </main>
+
+  <div id="overlay" class="overlay hidden">
+    <div class="dialog">
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-text"></p>
+      <div class="dialog-actions" id="dialog-actions"></div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
